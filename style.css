@@ -243,7 +243,7 @@ h2:hover {
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 6px 20px rgb(189, 154, 17);
+  box-shadow: 0 6px 20px  rgb(192, 192, 192);
   transition: 0.4s;
 }
 
@@ -814,3 +814,4 @@ h2:hover::after {
     background: #fff;
   }
 }
+
