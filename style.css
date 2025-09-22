@@ -814,5 +814,22 @@ h2:hover::after {
     background: #fff;
   }
 }
+/* Fix spacing in Education & Experience cards on mobile */
+@media (max-width: 768px) {
+  .education-card h3,
+  .experience-card h3 {
+    display: block;       /* stack them instead of inline */
+    margin-bottom: 4px;   /* add a little gap */
+  }
+
+  .education-card span,
+  .experience-card span {
+    display: block;       /* put institute/year on new line */
+    margin-top: 2px;
+    font-size: 0.9rem;    /* slightly smaller on mobile */
+    line-height: 1.4;
+  }
+}
+
 
 
