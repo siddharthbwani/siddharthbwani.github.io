@@ -301,7 +301,7 @@ h2:hover::after {
 }
 
 .about-section ul li {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 15px;
   padding-left: 32px;
@@ -467,7 +467,7 @@ h2:hover::after {
 }
 
 .experience-entry h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #222;
 }
@@ -546,7 +546,7 @@ h2:hover::after {
 }
 
 .edu-header h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #222;
 }
@@ -814,4 +814,5 @@ h2:hover::after {
     background: #fff;
   }
 }
+
 
