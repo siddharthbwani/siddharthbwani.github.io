@@ -243,7 +243,7 @@ h2:hover {
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 6px 20px  rgb(192, 192, 192);
+  box-shadow: 0 6px 20px rgb(189, 154, 17);
   transition: 0.4s;
 }
 
@@ -302,7 +302,7 @@ h2:hover::after {
 
 .about-section ul li {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-bottom: 15px;
   padding-left: 32px;
   position: relative;
@@ -467,7 +467,7 @@ h2:hover::after {
 }
 
 .experience-entry h3 {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #222;
 }
@@ -546,7 +546,7 @@ h2:hover::after {
 }
 
 .edu-header h3 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #222;
 }
@@ -814,22 +814,59 @@ h2:hover::after {
     background: #fff;
   }
 }
-/* Fix spacing in Education & Experience cards on mobile */
-@media (max-width: 768px) {
-  .education-card h3,
-  .experience-card h3 {
-    display: block;       /* stack them instead of inline */
-    margin-bottom: 4px;   /* add a little gap */
-  }
-
-  .education-card span,
-  .experience-card span {
-    display: block;       /* put institute/year on new line */
-    margin-top: 2px;
-    font-size: 0.9rem;    /* slightly smaller on mobile */
-    line-height: 1.4;
-  }
+/* Experience & Education header fix */
+.exp-header,
+.edu-header {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: flex-start;  /* left align */
+  margin-bottom: 8px;       /* spacing below header */
 }
 
+.exp-header h3,
+.edu-header h3 {
+  margin: 0;
+  font-size: 1.1rem;        /* heading size */
+  font-weight: bold;
+}
 
+.exp-header .exp-date,
+.edu-header .edu-date {
+  margin-top: 4px;          /* gap below title */
+  font-size: 0.9rem;
+  color: #555;              /* softer text */
+}
 
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .exp-header h3,
+  .edu-header h3 {
+    font-size: 1rem;
+  }
+
+  .exp-header .exp-date,
+  .edu-header .edu-date {
+    font-size: 0.85rem;
+  }
+}
+/* Force contact form fields to stack vertically */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* space between fields */
+}
+
+.contact-form .form-group {
+  width: 100% !important;
+  display: block;
+}
+
+.contact-form .form-group.half-width {
+  width: 100% !important; /* override half-width */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100% !important;
+  display: block;
+}
