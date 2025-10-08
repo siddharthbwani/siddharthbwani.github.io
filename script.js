@@ -222,3 +222,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const emailLink = document.getElementById("emailLink");
+  const emailAddress = "wanisiddharthb@gmail.com";
+  const subject = "Hello Siddharth";
+  const body = "I want to connect with you";
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  emailLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (isMobile) {
+      // Mobile: Open default mail app
+      window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    } else {
+      // Desktop: Open Gmail web in new tab
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.open(gmailUrl, "_blank");
+    }
+  });
+});
+
